@@ -1,6 +1,8 @@
 # DSTIKE-events
 A playground/example of event based programming on the DSTIKE ESP8266 Watch V2
 
+![DSTIKE Demo](https://raw.githubusercontent.com/dougle/DSTIKE-events/main/demo.gif)
+
 ### Eventually
 [Eventually](https://github.com/johnnyb/Eventually) is a library for adding event listeners to a chain, the chain is periodically iterated and each event is evaluated for any trigger event(s), if a listener is triggered the relevant [action](https://github.com/dougle/DSTIKE-events/blob/main/src/actions.h) is called.
 
