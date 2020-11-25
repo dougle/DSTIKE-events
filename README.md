@@ -46,4 +46,4 @@ To setup wifi, create `src/wifi.h` and paste in the following:
 #### Future
 Please fork and PR any new event based examples or fixes, all are welcome, i'll be updating this when i need to play around with other events on the DSTIKE.
 
-Raise [issues](https://github.com/dougle/DSTIKE-events/issues) is you find problems or have any questions.
+Raise [issues](https://github.com/dougle/DSTIKE-events/issues) if you find problems or have any questions.
