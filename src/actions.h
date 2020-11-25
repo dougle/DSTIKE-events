@@ -100,9 +100,10 @@ bool wifi_status_change(EvtWifiStateListener lstn, EvtContext ctx) {
 	draw_wifi_symbol(lstn);
 
 	if (lstn.currentState != WL_CONNECTED) {
-		Serial.printf("WiFi not connected: %d vs %d\n", lstn.currentState, WL_CONNECTED);
-		blink_wifi_listener = new EvtTimeListener(1000, true, (EvtAction)blink_wifi);
-		mgr.addListener(blink_wifi_listener);
+		if (!blink_wifi_listener) {
+			blink_wifi_listener = new EvtTimeListener(1000, true, (EvtAction) blink_wifi);
+			mgr.addListener(blink_wifi_listener);
+		}
 	} else {
 		if(blink_wifi_listener)
 			mgr.removeListener(blink_wifi_listener);

@@ -5,13 +5,6 @@
 #include <ESP8266WiFi.h>
 #include "listeners.h"
 
-void EvtPullupPinListener::setupListener() {
-	EvtPinListener::setupListener();
-	targetValue = LOW;
-};
-
-
-
 EvtWifiStateListener::EvtWifiStateListener(EvtAction action) {
 	this->triggerAction = action;
 };

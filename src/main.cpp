@@ -62,9 +62,9 @@ void setup() {
 
 	Serial.println("Start listeners");
 	mgr.resetContext();
-	mgr.addListener(new EvtPullupPinListener(BUTTON_UP, 100, (EvtAction)button_up));
-	mgr.addListener(new EvtPullupPinListener(BUTTON_DOWN, 100, (EvtAction)button_down));
-	mgr.addListener(new EvtPullupPinListener(BUTTON_SELECT, 100, (EvtAction)button_select));
+	mgr.addListener(new EvtPinListener(BUTTON_UP, 100, LOW, (EvtAction)button_up));
+	mgr.addListener(new EvtPinListener(BUTTON_DOWN, 100, LOW, (EvtAction)button_down));
+	mgr.addListener(new EvtPinListener(BUTTON_SELECT, 100, LOW, (EvtAction)button_select));
 
 	mgr.addListener(new EvtWifiStateListener((EvtAction)wifi_status_change));
 

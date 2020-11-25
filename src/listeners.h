@@ -7,14 +7,6 @@
 
 #include <Eventually.h>
 
-class EvtPullupPinListener : public EvtPinListener {
-public:
-	EvtPullupPinListener(int pin, EvtAction trigger):EvtPinListener(pin, trigger) {};
-	EvtPullupPinListener(int pin, int debounce, EvtAction trigger):EvtPinListener(pin, debounce, trigger) {};
-
-	virtual void setupListener();
-};
-
 class EvtWifiStateListener : public EvtListener {
 public:
 	EvtWifiStateListener(EvtAction action);
