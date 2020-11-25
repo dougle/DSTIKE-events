@@ -2,13 +2,13 @@
 A playground/example of event based programming on the DSTIKE ESP8266 Watch V2
 
 ### Eventually
-[Eventually](https://github.com/johnnyb/Eventually) is a library for adding event listeners to a queue, the queue is periodically iterated and each event is evaluated for any trigger event(s), if a listener is triggered the relevant [action](https://github.com/dougle/DSTIKE-events/blob/main/src/actions.h) is called.
+[Eventually](https://github.com/johnnyb/Eventually) is a library for adding event listeners to a chain, the chain is periodically iterated and each event is evaluated for any trigger event(s), if a listener is triggered the relevant [action](https://github.com/dougle/DSTIKE-events/blob/main/src/actions.h) is called.
 
-Two [custom listeners](https://github.com/dougle/DSTIKE-events/blob/main/src/listeners.h) are defined for listening to pulled up pins and for the ESPs wifi adapter status.
+A [custom listener](https://github.com/dougle/DSTIKE-events/blob/main/src/listeners.h) is defined for listening for the ESPs wifi adapter status.
 
 Note that Eventually's [loop iteration macro](https://github.com/johnnyb/Eventually/blob/master/src/Eventually.h#L101) isn't used, this is because the ESP's watchdog needs a slight delay to keep it happy (fed).
 
-I am currently using a fork of eventually from [jaredwhite128](https://github.com/jaredwhite128/Eventually) this is while [PR7](https://github.com/johnnyb/Eventually/pull/7) is open which resolves several bugs.
+I am currently using a fork of eventually, this is while [PR7](https://github.com/johnnyb/Eventually/pull/7) and [PR12](https://github.com/johnnyb/Eventually/pull/12) are open.
 
 #### Build
 A PlatformIO ini is supplied you can build, upload and monitor from the project root with the following command.
